@@ -13,7 +13,7 @@ function AboutPage() {
                 <Title title={'About Me'} span={'About Me'} />
                 <ImageSection />
                 <ServicesSection />
-                <ReviewsSection />
+                {/* <ReviewsSection /> */}
             </AboutStyled >
         </MainLayout>
     )

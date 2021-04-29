@@ -7,28 +7,29 @@ import design from '../img/design.svg';
 import intelligence from '../img/intelligence.svg';
 import gamedev from '../img/game-dev.svg';
 
+
 function ServicesSection() {
     return (
         <InnerLayout>
             <ServicesSectionStyled>
-                <Title title={'Services'} span={'services'} />
+                <Title title={'Roles'} span={'Roles'} />
                 <div className="services">
                     <ServiceCard 
                         image={design} 
                         title={'Front End Web Devlopment'} 
-                        paragraph={'I can create responsive web sites using front end technologies such as React,HTML,CSS,Bootstrap,Javascript.'}
+                        
                     />
                     <div className="mid-card">
                         <ServiceCard 
                             image={intelligence} 
                             title={'Back End Web Devlopment'} 
-                            paragraph={'Able to build fully functional back end using NodeJS,MongoDB,ExpressJS.'}
+                           
                         />
                     </div>
                     <ServiceCard 
                         image={gamedev} 
                         title={'Full Stack Web Devlopment'} 
-                        paragraph={'Able to build fully functional application using front end and back end technologies.'}
+                        
                     />
                 </div>
             </ServicesSectionStyled>

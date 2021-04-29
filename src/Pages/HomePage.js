@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
-import FacebookIcon from '@material-ui/icons/Facebook';
 import GithubIcon from '@material-ui/icons/GitHub';
 import Particle from '../Components/Particle';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 function HomePage() {
     return (
@@ -19,8 +19,8 @@ function HomePage() {
                 open minded and flexible guy.  
                 </p>
                 <div className="icons">
-                    <a href="https://codepen.io/pen/" className="icon i-facebook">
-                        <FacebookIcon />
+                    <a href="https://www.linkedin.com/in/ganesh-kulkarni-80aa32154" className="icon i-facebook">
+                        <LinkedInIcon />
                     </a>
                     <a href="https://github.com/MrGanesh" className="icon i-github">
                         <GithubIcon />

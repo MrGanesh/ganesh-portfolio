@@ -4,8 +4,10 @@ import img3 from '../img/portImages/amazon.png';
 import img4 from '../img/portImages/whatsapp.jpg';
 import img5 from '../img/portImages/github.jpg';
 import img6 from '../img/portImages/spotify.png';
-import img7 from '../img/portImages/covid.png';
+import img7 from '../img/portImages/CovidT.png';
 import img8 from '../img/portImages/book.jpg';
+import img9 from '../img/portImages/twitter.jpg';
+import img10 from '../img/portImages/chat.jpg';
 
 const portfolios = [
     {
@@ -41,7 +43,7 @@ const portfolios = [
         image: img4,
         link1: 'https://github.com/MrGanesh/whatsapp-clone/tree/main',
         link2: 'https://heuristic-shaw-afacaa.netlify.app/',
-        title: 'Book Keeping',
+        title: 'WhatsApp Clone',
         text: ''
     },
     {
@@ -78,6 +80,24 @@ const portfolios = [
         link1: 'https://github.com/MrGanesh/Book-Keeping',
         link2: 'https://mystifying-morse-9e50bf.netlify.app/',
         title: 'Book Keeping',
+        text: ''
+    },
+    {
+        id: 9,
+        category: 'Full Stack',
+        image: img9,
+        link1: 'https://github.com/MrGanesh/twitter-clone',
+        link2: 'https://silly-noether-14bfdd.netlify.app/',
+        title: 'Twitter Clone',
+        text: ''
+    },
+    {
+        id: 10,
+        category: 'Full Stack',
+        image: img10,
+        link1: 'https://github.com/MrGanesh/chat-app-using-socket.io',
+        link2: 'https://quirky-stonebraker-fd01db.netlify.app/',
+        title: 'Chat App',
         text: ''
     }
    
