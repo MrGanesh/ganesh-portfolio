@@ -1,17 +1,17 @@
 import React from 'react'
 import styled from 'styled-components';
 import GitHub from '@material-ui/icons/GitHub';
-import Pinterest from '@material-ui/icons/Pinterest';
+import Pinterest from '@material-ui/icons/Cast';
 
-function Menu({menuItem}) {
+function Menu({ menuItem }) {
     return (
         <MenuItemStyled >
             {
-                menuItem.map((item)=>{
+                menuItem.map((item) => {
                     return <div className="grid-item" key={item.id}>
                         <div className="portfolio-content">
                             <div className="portfolio-image">
-                                <img src={item.image} alt=""/>
+                                <img src={item.image} alt="" />
                                 <ul>
                                     <li>
                                         <a href={item.link1}>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-function ResumeItem({year, title, subTitle, text}) {
+function ResumeItem({ year, title, subTitle, text }) {
     return (
         <ResumeItemStyled>
             <div className="left-content">
@@ -27,7 +27,7 @@ const ResumeItemStyled = styled.div`
         padding-bottom: 3rem;
     }
     .left-content{
-        width: 50%;
+        width: 30%;
         padding-left: 20px;
         position: relative;
         &::before{

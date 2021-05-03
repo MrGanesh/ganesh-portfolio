@@ -2,8 +2,43 @@ import React from 'react'
 import styled from 'styled-components';
 import resume from '../img/resume.jpg';
 import PrimaryButton from './PrimaryButton';
-
+import axios from 'axios'
 function ImageSection() {
+
+    const downloadCV =  (e) => {
+        alert("Please wait, download will start soon!!!")
+        axios({
+            method: 'get',
+            url: 'https://resume-download.herokuapp.com/download/',
+          responseType: 'blob',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            })
+            .then((res) => {
+                const url = window.URL.createObjectURL(new Blob([res.data]));
+                const link = document.createElement('a');
+                link.href = url;
+            link.setAttribute('download', 'cv.pdf');
+                document.body.appendChild(link);
+                link.click();
+
+                alert("CV downloaded successfully, Thank you for you patience!!")
+            })
+            .catch((error) => {
+                alert(error);
+            })
+       }
+    //    (e) => 
+    //     console.log('button is clicked')
+    //     fetch('http://localhost:5000/download',{
+    //         method:'get'
+    //     })
+        // fetch('https://resume-download.herokuapp.com/download')
+    
+
+
+
     return (
         <ImageSectionStyled>
             <div className="left-content">
@@ -38,7 +73,7 @@ function ImageSection() {
                         <p>: Full Stack Web Devloper</p>
                     </div>
                 </div>
-                <PrimaryButton title={'Download Cv'} />
+                <PrimaryButtonStyled  onClick={(e)=> downloadCV(e)} >Download CV</PrimaryButtonStyled> 
             </div>
         </ImageSectionStyled>
     )
@@ -88,6 +123,32 @@ const ImageSectionStyled = styled.div`
                 }
             }
         }
+    }
+`;
+
+const PrimaryButtonStyled = styled.a`
+    background-color: var(--primary-color);
+    padding: .8rem 2.5rem;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: inherit;
+    text-transform: uppercase;
+    position: relative;
+    transition: all .4s ease-in-out;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: .2rem;
+        transition: all .4s ease-in-out;
+        left: 0;
+        bottom: 0;
+        opacity: .7;
+    }
+    &:hover::after{
+        width: 100%;
+        background-color: var(--white-color);
     }
 `;
 export default ImageSection;

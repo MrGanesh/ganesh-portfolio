@@ -1,22 +1,22 @@
 import React from 'react'
 import styled from 'styled-components';
-import {InnerLayout} from '../styles/Layouts';
+import { InnerLayout } from '../styles/Layouts';
 import Title from '../Components/Title';
 import ReviewItem from '../Components/ReviewItem';
 
 function ReviewsSetion() {
     return (
         <ReviewsStyled>
-            <Title title={'Reviews'} span={'Reviews'} />
+            <Title title={'Recommendations'} span={'Recommendations'} />
             <InnerLayout>
                 <div className="reviews">
-                    <ReviewItem 
-                        text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt culpa ad itaque quas?'} 
+                    <ReviewItem
+                        text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt culpa ad itaque quas?'}
                     />
-                    <ReviewItem 
+                    {/* <ReviewItem 
                         text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt culpa ad itaque quas? Dos ir por culpa ad itaque quas!'} 
-                    />
-                    
+                    /> */}
+
                 </div>
             </InnerLayout>
         </ReviewsStyled>

@@ -17,29 +17,29 @@ import { IconButton } from "@material-ui/core";
 
 
 function App() {
-  const [theme, setTheme] = useState('dark-theme');
+  const [theme, setTheme] = useState('light-theme');
   const [checked, setChecked] = useState(false);
   const [navToggle, setNavToggle] = useState(false);
 
-  useEffect(()=>{
+  useEffect(() => {
     document.documentElement.className = theme;
   }, [theme]);
 
-  const themeToggler = () =>{
-    if(theme === 'light-theme'){
-      setTheme('dark-theme');
-      setChecked(false)
-    }else{
-      setTheme('light-theme');
-      setChecked(true)
-    }
-  }
+  // const themeToggler = () =>{
+  //   if(theme === 'light-theme'){
+  //     setTheme('dark-theme');
+  //     setChecked(false)
+  //   }else{
+  //     setTheme('light-theme');
+  //     setChecked(true)
+  //   }
+  // }
 
   return (
     <div className="App">
-        <Sidebar navToggle={navToggle} />
+      <Sidebar navToggle={navToggle} />
 
-        <div className="theme">
+      {/* <div className="theme">
           <div className="light-dark-mode">
               <div className="left-content">
                 <Brightness4Icon />
@@ -55,44 +55,44 @@ function App() {
                 />
               </div>
             </div>
+        </div> */}
+
+      <div className="ham-burger-menu">
+        <IconButton onClick={() => setNavToggle(!navToggle)}>
+          <MenuIcon />
+        </IconButton>
+      </div>
+
+      <MainContentStyled>
+        <div className="lines">
+          <div className="line-1"></div>
+          <div className="line-2"></div>
+          <div className="line-3"></div>
+          <div className="line-4"></div>
         </div>
 
-        <div className="ham-burger-menu">
-          <IconButton onClick={() => setNavToggle(!navToggle)}>
-              <MenuIcon />
-          </IconButton>
-        </div>
+        <Switching>
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
+          <Route path="/about" exact>
+            <AboutPage />
+          </Route>
+          <Route path="/resume" exact>
+            <ResumePage />
+          </Route>
+          <Route path="/portfolios" exact>
+            <PortfoliosPage />
+          </Route>
+          <Route path="/blogs" exact>
+            <BlogsPage />
+          </Route>
+          <Route path="/contact" exact>
+            <ContactPage />
+          </Route>
+        </Switching>
 
-        <MainContentStyled>
-          <div className="lines">
-            <div className="line-1"></div>
-            <div className="line-2"></div>
-            <div className="line-3"></div>
-            <div className="line-4"></div>
-          </div>
-
-          <Switching>
-            <Route path="/" exact>
-              <HomePage />
-            </Route>
-            <Route path="/about" exact>
-              <AboutPage />
-            </Route>
-            <Route path="/resume" exact>
-              <ResumePage />
-            </Route>
-            <Route path="/portfolios" exact>
-              <PortfoliosPage />
-            </Route>
-            <Route path="/blogs" exact>
-               <BlogsPage />
-            </Route>
-            <Route path="/contact" exact>
-              <ContactPage />
-            </Route>
-          </Switching>
-
-        </MainContentStyled>
+      </MainContentStyled>
     </div>
   );
 }

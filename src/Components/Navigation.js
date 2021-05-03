@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components';
-import {NavLink} from 'react-router-dom';
-import avatar from '../img/avatar.jpg';
+import { NavLink } from 'react-router-dom';
+import avatar from '../img/resume.jpg';
 
 function Navigation() {
     return (
         <NavigationStyled>
             <div className="avatar">
-                <img src={avatar} alt=""/>
+                <img src={avatar} alt="" />
             </div>
             <ul className="nav-items">
                 <li className="nav-item">
@@ -23,11 +23,14 @@ function Navigation() {
                     <NavLink to="/portfolios" activeClassName="active-class" exact>Portfolios</NavLink>
                 </li>
                 <li className="nav-item">
+                    <NavLink to="/blogs" activeClassName="active-class" exact>Certifications</NavLink>
+                </li>
+                <li className="nav-item">
                     <NavLink to="/contact" activeClassName="active-class" exact>Contact</NavLink>
                 </li>
             </ul>
             <footer className="footer">
-                <p> <b>Ganesh Kulkarni</b></p>
+                <p><b>Ganesh Kulkarni</b></p>
             </footer>
         </NavigationStyled>
     )

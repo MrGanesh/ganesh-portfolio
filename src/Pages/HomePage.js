@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GithubIcon from '@material-ui/icons/GitHub';
 import Particle from '../Components/Particle';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 function HomePage() {
     return (
@@ -13,10 +13,10 @@ function HomePage() {
             <div className="typography">
                 <h1>Hi, I'm <span>Ganesh Kulkarni</span></h1>
                 <p>
-                I am a software engineer by profession.
-                An enthusiastic person who is ready to take up challenges and
-                can quickly adapt new technologies and environment. I am confident
-                open minded and flexible guy.  
+                    I am a software engineer by profession.
+                    An enthusiastic person who is ready to take up challenges and
+                    can quickly adapt new technologies and environment. I am confident
+                    open minded and flexible guy.
                 </p>
                 <div className="icons">
                     <a href="https://www.linkedin.com/in/ganesh-kulkarni-80aa32154" className="icon i-facebook">
@@ -25,7 +25,7 @@ function HomePage() {
                     <a href="https://github.com/MrGanesh" className="icon i-github">
                         <GithubIcon />
                     </a>
-                   
+
                 </div>
             </div>
         </HomePageStyled>

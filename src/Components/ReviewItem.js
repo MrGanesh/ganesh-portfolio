@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
-
-function ReviewItem({text}) {
+import recommend from '../img/recommend.JPG';
+function ReviewItem({ text }) {
     return (
         <RevivewItemStyled>
-            <p>{text}</p>
+            <p><img src={recommend} height="auto" width="100%" /></p>
         </RevivewItemStyled>
     )
 }
